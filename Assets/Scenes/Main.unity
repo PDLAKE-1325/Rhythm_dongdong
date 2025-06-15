@@ -128,6 +128,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 36110851}
+  - component: {fileID: 36110856}
+  - component: {fileID: 36110855}
   - component: {fileID: 36110854}
   - component: {fileID: 36110853}
   - component: {fileID: 36110852}
@@ -191,13 +193,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e13fe675352b941b7bef29467bf918ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicData:
-  - sheet_music:
-      notes: []
-    title: 
-    composer: 
-    difficulty_star_cnt: 0
-    background_sprite: {fileID: 0}
+  music_data: []
+--- !u!114 &36110855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 36110847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fca86dca8af34f0d892c1ff8edc5cfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  noteGenerator: {fileID: 1989409022}
+--- !u!114 &36110856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 36110847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f70745d55f99a4eda9e3bce3df8b6296, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  note_deth_time: 0
+  music_start_delay: 0
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -310,7 +333,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1989409021}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &942808871
@@ -698,6 +722,58 @@ Transform:
   m_Children: []
   m_Father: {fileID: 942808872}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1989409020
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1989409021}
+  - component: {fileID: 1989409022}
+  m_Layer: 0
+  m_Name: NoteGenerator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1989409021
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1989409020}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 646281544}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1989409022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1989409020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b25c91cd2ae80416db1e021e9391570a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pre_time_delay: 0
+  note_parent: {fileID: 0}
+  note_prefab: {fileID: 0}
+  note_spawn_ahead_time: 0
+  end_up: {fileID: 0}
+  end_down: {fileID: 0}
+  end_left: {fileID: 0}
+  end_right: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

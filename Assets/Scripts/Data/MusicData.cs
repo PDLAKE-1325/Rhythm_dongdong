@@ -9,4 +9,5 @@ public class MusicData
     public Sprite main_image;
     public Sprite preview_image;
     public Sprite in_game_background_image;
+    public AudioClip music_source;
 }

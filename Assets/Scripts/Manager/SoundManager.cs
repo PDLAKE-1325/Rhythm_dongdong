@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -52,5 +53,18 @@ public class SoundManager : MonoBehaviour
     public void ChangeSFX_Vol(Slider slider)
     {
         sfxVolume = slider.value;
+    }
+
+    public void OnMusicStart()
+    {
+        StartCoroutine(_OnMusicStart());
+    }
+    IEnumerator _OnMusicStart()
+    {
+        float start_delay = InGameStreamManager.Instance.music_start_delay;
+        AudioClip music = MusicDataManager.Instance.music_data
+        [LevelManager.Instance.currentLevel].music_source;
+        yield return new WaitForSeconds(start_delay);
+        PlayBGM(music);
     }
 }
