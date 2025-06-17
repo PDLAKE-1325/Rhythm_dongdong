@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -16,6 +17,9 @@ public class SoundManager : Singleton<SoundManager>
     [Header("Volume Settings")]
     [Range(0f, 1f)] public float bgmVolume = 0.7f;
     [Range(0f, 1f)] public float sfxVolume = 0.7f;
+
+    [Header("Musics")]
+    [SerializeField] List<AudioClip> musics;
 
     private void Update()
     {
@@ -47,14 +51,7 @@ public class SoundManager : Singleton<SoundManager>
 
     public void OnMusicStart()
     {
-        StartCoroutine(_OnMusicStart());
-    }
-    IEnumerator _OnMusicStart()
-    {
-        float start_delay = InGameStreamManager.Instance.music_start_delay;
-        AudioClip music = MusicDataManager.Instance.music_data
-        [LevelManager.Instance.currentLevel].music_source;
-        yield return new WaitForSeconds(start_delay);
-        PlayBGM(music);
+        int level = LevelManager.Instance.currentLevel;
+        PlayBGM(musics[level]);
     }
 }

@@ -25,6 +25,10 @@ public class StatusManager : Singleton<StatusManager>
     [HideInInspector]
     public int healh { get; private set; }
 
+    [Header("체력")]
+    [SerializeField] float hp_recovery_rate;
+
+    [Header("참조")]
     [SerializeField] Text combo_text;
     [SerializeField] Transform heathObj;
 
@@ -61,6 +65,7 @@ public class StatusManager : Singleton<StatusManager>
     {
         if (!InGameStreamManager.Instance.in_game)
         {
+            combo = 0;
             combo_text.gameObject.SetActive(false);
             return;
         }

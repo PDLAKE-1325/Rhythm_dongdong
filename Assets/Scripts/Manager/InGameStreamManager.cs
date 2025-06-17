@@ -30,9 +30,6 @@ public class InGameStreamManager : Singleton<InGameStreamManager>
     [Header("노트 데미지 받는 거리")]
     public float note_damage_distance;
 
-    [Header("시작하고 음악 나오는 딜레이")]
-    public float music_start_delay = 1;
-
     [Header("끝나고 결과 보여주는 시간")]
     public float music_result_show_time = 3;
 
