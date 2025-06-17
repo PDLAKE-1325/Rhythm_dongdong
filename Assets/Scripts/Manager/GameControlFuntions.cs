@@ -45,15 +45,8 @@ public class GameControlFuntions : Singleton<GameControlFuntions>
 
     public void ActuallyStart()
     {
-        StartCoroutine(_ActuallyStart());
-
-    }
-
-    IEnumerator _ActuallyStart()
-    {
         SoundManager.Instance.OnMusicStart();
         StatusManager.Instance.OnMusicStart();
-        yield return new WaitForSeconds(InGameStreamManager.Instance.music_start_delay);
         InGameStreamManager.Instance.OnMusicStart();
     }
 }
