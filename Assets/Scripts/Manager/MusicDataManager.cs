@@ -2,21 +2,11 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MusicDataManager : MonoBehaviour
+public class MusicDataManager : Singleton<MusicDataManager>
 {
-    public static MusicDataManager Instance { get; private set; }
-    void Awake()
+    protected override void Awake()
     {
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
+        base.Awake();
     }
-
     public List<MusicData> music_data;
 }
