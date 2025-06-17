@@ -47,10 +47,8 @@ public class JudgementSystem : Singleton<JudgementSystem>
         Instantiate(miss_prefab, judge_text_parent);
     }
 
-    public void JudgeNoteTime(Note note, int note_index)
+    public void JudgeNoteTime(Note note)
     {
-        if (InGameStreamManager.Instance.current_node_index != note_index) return;
-
         float note_time = note.note_data.time;
         float inputTime = InGameStreamManager.Instance.current_time;
 
