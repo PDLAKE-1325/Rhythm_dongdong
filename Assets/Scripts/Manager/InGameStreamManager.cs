@@ -9,8 +9,6 @@ public class InGameStreamManager : Singleton<InGameStreamManager>
     }
 
     [HideInInspector]
-    public float current_time { get; private set; }
-    [HideInInspector]
     public int current_node_index { get; private set; }
     [HideInInspector]
     public int current_node_spawn_index { get; private set; }
@@ -49,7 +47,6 @@ public class InGameStreamManager : Singleton<InGameStreamManager>
 
     public void OnMusicStart()
     {
-        current_time = 0;
         current_node_index = 0;
         current_node_spawn_index = 0;
         music_sheet = MusicDataManager.Instance.music_data
@@ -78,7 +75,7 @@ public class InGameStreamManager : Singleton<InGameStreamManager>
             SoundManager.Instance.sfxVolume = 1f;
             SoundManager.Instance.PlayBGM(menuMusic);
         }
-        else if (in_game)
+        else if (in_game && music_started)
         {
             SoundManager.Instance.bgmVolume = 0.7f;
             SoundManager.Instance.sfxVolume = 1f;
@@ -87,18 +84,12 @@ public class InGameStreamManager : Singleton<InGameStreamManager>
 
     void CheckMusicEnd()
     {
-        if (!music_started) return;
-        if (current_node_index == music_sheet.Count)
-        {
-            music_started = false;
+        if (music_started && current_node_index == music_sheet.Count)
             GameControlFuntions.Instance.GameEnd();
-        }
     }
 
     void Update()
     {
-        if (music_started)
-            current_time += Time.deltaTime;
         SetMenuMusic();
         CheckMusicEnd();
     }

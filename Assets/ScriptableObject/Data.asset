@@ -1,0 +1,894 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f558e6ad236514b68ac5919d83306ea8, type: 3}
+  m_Name: Data
+  m_EditorClassIdentifier: 
+  Tako_Halo:
+  - time: 11.373333333333221
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 12.439999999999827
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 13.079999999999927
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 13.570666666666511
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 14.082666666666455
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 14.530666666666548
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 15.192000000000007
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 15.469333333333225
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 15.789333333333161
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 16.109333333333325
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 16.386666666666542
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 16.53599999999983
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 16.941333333333205
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 17.26133333333314
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 17.858666666666522
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 18.413333333333185
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 18.903999999999996
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 19.39466666666658
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 19.991999999999962
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 20.333333333333258
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 20.631999999999834
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 20.951999999999998
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 21.207999999999856
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 21.335999999999785
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 21.7199999999998
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 22.061333333333323
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 22.594666666666626
+    speed: 3
+    lane: 3
+    type: 0
+  MorePlastic_Power:
+  - time: 1.3593333333333704
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 3.0233333333333574
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 4.452666666666619
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 6.010000000000036
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 7.6740000000000235
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 9.018000000000075
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 10.532666666666547
+    speed: 3
+    lane: 2
+    type: 0
+  - time: 12.004666666666754
+    speed: 3
+    lane: 1
+    type: 0
+  - time: 12.665999999999986
+    speed: 3
+    lane: 0
+    type: 0
+  - time: 13.519333333333226
+    speed: 3
+    lane: 1
+    type: 0
+  - time: 15.119333333333362
+    speed: 3
+    lane: 2
+    type: 0
+  - time: 15.482000000000017
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 15.780666666666594
+    speed: 3
+    lane: 2
+    type: 0
+  - time: 16.185999999999968
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 16.505999999999904
+    speed: 3
+    lane: 2
+    type: 0
+  - time: 16.932666666666638
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 17.316666666666652
+    speed: 3
+    lane: 2
+    type: 0
+  - time: 17.657999999999948
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 18.063333333333322
+    speed: 3
+    lane: 2
+    type: 0
+  - time: 18.425999999999977
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 18.724666666666554
+    speed: 3
+    lane: 2
+    type: 0
+  - time: 19.172666666666647
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 19.55666666666666
+    speed: 3
+    lane: 2
+    type: 0
+  - time: 19.962000000000035
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 20.32466666666669
+    speed: 3
+    lane: 2
+    type: 0
+  - time: 20.730000000000064
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 21.07133333333336
+    speed: 3
+    lane: 2
+    type: 0
+  - time: 21.476666666666734
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 21.83933333333339
+    speed: 3
+    lane: 2
+    type: 0
+  - time: 22.202000000000044
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 22.54333333333334
+    speed: 3
+    lane: 0
+    type: 0
+  - time: 22.948666666666714
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 23.33266666666673
+    speed: 3
+    lane: 1
+    type: 0
+  - time: 23.674000000000024
+    speed: 3
+    lane: 2
+    type: 0
+  - time: 24.100666666666758
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 24.505999999999904
+    speed: 3
+    lane: 1
+    type: 0
+  - time: 24.91133333333328
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 25.33800000000001
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 25.785999999999877
+    speed: 3
+    lane: 2
+    type: 0
+  - time: 26.063333333333322
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 26.298000000000048
+    speed: 3
+    lane: 1
+    type: 0
+  - time: 26.660666666666703
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 27.02333333333336
+    speed: 3
+    lane: 0
+    type: 0
+  - time: 27.407333333333373
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 27.471333333333224
+    speed: 3
+    lane: 2
+    type: 0
+  - time: 27.74866666666667
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 27.83399999999988
+    speed: 3
+    lane: 1
+    type: 0
+  - time: 28.154000000000043
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 28.538000000000057
+    speed: 3
+    lane: 2
+    type: 0
+  - time: 28.900666666666712
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 29.284666666666727
+    speed: 3
+    lane: 0
+    type: 0
+  - time: 29.647333333333382
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 30.031333333333396
+    speed: 3
+    lane: 1
+    type: 0
+  - time: 30.41533333333341
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 30.7993333333332
+    speed: 3
+    lane: 2
+    type: 0
+  - time: 31.183333333333213
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 31.524666666666736
+    speed: 3
+    lane: 0
+    type: 0
+  - time: 31.9726666666666
+    speed: 3
+    lane: 1
+    type: 0
+  - time: 32.31399999999989
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 32.67666666666655
+    speed: 3
+    lane: 2
+    type: 0
+  - time: 33.01800000000007
+    speed: 3
+    lane: 0
+    type: 0
+  - time: 33.46599999999994
+    speed: 3
+    lane: 1
+    type: 0
+  - time: 33.82866666666659
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 34.14866666666653
+    speed: 3
+    lane: 2
+    type: 0
+  - time: 34.319333333333404
+    speed: 3
+    lane: 2
+    type: 0
+  - time: 34.53266666666654
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 34.91666666666656
+    speed: 3
+    lane: 0
+    type: 0
+  - time: 35.25800000000008
+    speed: 3
+    lane: 1
+    type: 0
+  - time: 35.620666666666736
+    speed: 3
+    lane: 2
+    type: 0
+  - time: 35.98333333333339
+    speed: 3
+    lane: 1
+    type: 0
+  - time: 36.367333333333406
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 36.75133333333342
+    speed: 3
+    lane: 1
+    type: 0
+  - time: 37.092666666666716
+    speed: 3
+    lane: 2
+    type: 0
+  WW_OIIAOIIA:
+  - time: 2.341333333333341
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 2.6400000000000317
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 3.045333333333292
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 3.4720000000000253
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 3.855999999999926
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 4.239999999999941
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 4.623999999999955
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 5.029333333333329
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 5.413333333333344
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 5.818666666666604
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 6.202666666666619
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 6.629333333333352
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 7.0133333333333665
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 7.418666666666627
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 7.824000000000001
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 8.229333333333262
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 8.613333333333276
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 9.04000000000001
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 9.424000000000024
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 9.807999999999925
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 10.234666666666659
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 10.640000000000033
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 11.045333333333293
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 11.429333333333307
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 11.813333333333322
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 12.197333333333336
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 12.602666666666597
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 13.02933333333333
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 13.434666666666704
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 13.861333333333324
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 14.287999999999943
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 14.714666666666677
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 15.098666666666691
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 15.461333333333346
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 15.824000000000002
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 16.208000000000016
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 16.59200000000003
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 17.01866666666665
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 17.424000000000024
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 17.829333333333285
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 18.23466666666666
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 18.640000000000033
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 19.002666666666688
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 19.407999999999948
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 19.813333333333322
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 20.197333333333336
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 20.55999999999999
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 20.922666666666647
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 21.370666666666626
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 21.79733333333336
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 22.160000000000014
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 22.586666666666634
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 22.992000000000008
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 23.418666666666628
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 23.781333333333283
+    speed: 3
+    lane: 3
+    type: 0
+  BEATPELLAHOUSE_CandyThief:
+  - time: 3.2580000000000835
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 3.6633333333334575
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 4.175333333333401
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 4.687333333333345
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 5.114000000000078
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 5.583333333333303
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 6.052666666666755
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 6.52199999999998
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 6.991333333333432
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 7.482000000000016
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 7.972666666666828
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 8.463333333333413
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 8.911333333333506
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 9.38066666666673
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 9.850000000000183
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 10.362000000000126
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 10.831333333333351
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 11.364666666666654
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 11.855333333333466
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 12.303333333333331
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 12.794000000000143
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 13.306000000000086
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 13.754000000000179
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 14.266000000000123
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 14.735333333333347
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 15.226000000000159
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 15.695333333333384
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 16.185999999999968
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 16.65533333333342
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 17.103333333333513
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 17.615333333333457
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 18.10600000000004
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 18.617999999999984
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 19.108666666666796
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 19.57800000000002
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 20.068666666666832
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 20.516666666666698
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 20.98600000000015
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 21.498000000000093
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 21.988666666666678
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 22.45800000000013
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 22.948666666666714
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 23.418000000000166
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 23.90866666666675
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 24.420666666666694
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 24.890000000000146
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 25.40200000000009
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 25.871333333333315
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 26.340666666666767
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 26.80999999999999
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 27.279333333333444
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 27.74866666666667
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 28.21800000000012
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 28.751333333333424
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 29.178000000000157
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 29.6900000000001
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 30.180666666666685
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 30.628666666666778
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 31.098000000000003
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 31.588666666666814
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 32.079333333333395
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 32.56999999999998
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 33.08200000000015
+    speed: 3
+    lane: 3
+    type: 0
+  - time: 33.572666666666734
+    speed: 3
+    lane: 3
+    type: 0

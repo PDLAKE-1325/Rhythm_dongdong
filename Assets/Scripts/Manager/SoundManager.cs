@@ -11,8 +11,9 @@ public class SoundManager : Singleton<SoundManager>
     }
 
     [Header("Audio Sources")]
-    [SerializeField] private AudioSource bgmSource;
-    [SerializeField] private AudioSource sfxSource;
+    [SerializeField] AudioSource bgmSource;
+    [SerializeField] AudioSource sfxSource;
+    [SerializeField] AudioSource noteSource;
 
     [Header("Volume Settings")]
     [Range(0f, 1f)] public float bgmVolume = 0.7f;
@@ -21,10 +22,13 @@ public class SoundManager : Singleton<SoundManager>
     [Header("Musics")]
     [SerializeField] List<AudioClip> musics;
 
+    double music_start_time;
+
     private void Update()
     {
         bgmSource.volume = bgmVolume;
         sfxSource.volume = sfxVolume;
+        noteSource.volume = sfxVolume;
     }
 
     public void PlayBGM(AudioClip clip)
@@ -51,7 +55,43 @@ public class SoundManager : Singleton<SoundManager>
 
     public void OnMusicStart()
     {
+        bgmSource.SetScheduledEndTime(AudioSettings.dspTime);
         int level = LevelManager.Instance.currentLevel;
-        PlayBGM(musics[level]);
+        music_start_time = AudioSettings.dspTime + 1.0f;
+        bgmSource.clip = musics[level];
+        bgmSource.loop = false;
+        bgmSource.PlayScheduled(music_start_time);
+    }
+
+    public void VolLerpZeroBGM()
+    {
+        StartCoroutine(LerpToZero(1));
+    }
+
+    IEnumerator LerpToZero(float duration)
+    {
+        float elapsed = 0f;
+        float startValue = 0.7f;
+
+        while (elapsed < duration)
+        {
+            elapsed += Time.deltaTime;
+            float t = Mathf.Clamp01(elapsed / duration);
+            bgmVolume = Mathf.Lerp(startValue, 0f, t);
+            yield return null;
+        }
+
+        bgmVolume = 0;
+    }
+
+
+    public double GetMusicTime()
+    {
+        return AudioSettings.dspTime - music_start_time;
+    }
+
+    public void NoteSound()
+    {
+        // noteSource.PlayScheduled(AudioSettings.dspTime);
     }
 }

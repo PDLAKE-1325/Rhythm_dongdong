@@ -33,6 +33,9 @@ public class GameControlFuntions : Singleton<GameControlFuntions>
     public void GameEnd()
     {
         print("end");
+        InGameStreamManager.Instance.OnMusicEnd();
+        StatusManager.Instance.OnMusicEnd();
+        SoundManager.Instance.VolLerpZeroBGM();
         StartCoroutine(_GameEnd());
     }
 

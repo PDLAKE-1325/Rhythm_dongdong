@@ -11,8 +11,8 @@ public class Note : MonoBehaviour
         note_data = data;
         my_index = index;
 
-        float cur_time = InGameStreamManager.Instance.current_time;
-        float distance = data.speed * (data.time - cur_time);
+        double cur_time = SoundManager.Instance.GetMusicTime();
+        double distance = data.speed * (data.time - cur_time);
         Vector2 move_vector = new();
 
         switch (data.lane)
@@ -34,8 +34,7 @@ public class Note : MonoBehaviour
                 move_vector = Vector2.right;
                 break;
         }
-
-        transform.position = end_pos.position + (Vector3)(move_vector * distance);
+        transform.position = end_pos.position + (Vector3)(move_vector * (float)distance);
     }
 
     void Move()
@@ -46,22 +45,12 @@ public class Note : MonoBehaviour
     bool indexAdded;
     void CheckPass()
     {
-        float cur_time = InGameStreamManager.Instance.current_time;
-        float bad_judge = JudgementSystem.Instance.bad;
+        double cur_time = SoundManager.Instance.GetMusicTime();
+        double bad_judge = JudgementSystem.Instance.bad;
+
         if (note_data.time < cur_time - bad_judge && !indexAdded)
         {
             indexAdded = true;
-            InGameStreamManager.Instance.AddCurNodeIndex();
-        }
-
-        float distance = Vector2.Distance(transform.position, Vector2.zero);
-        if (distance <= InGameStreamManager.Instance.note_damage_distance)
-        {
-            if (!indexAdded)
-            {
-                indexAdded = true;
-                InGameStreamManager.Instance.AddCurNodeIndex();
-            }
             JudgementSystem.Instance.MissNote(this);
         }
     }
@@ -87,11 +76,16 @@ public class Note : MonoBehaviour
             JudgementSystem.Instance.JudgeNoteTime(this, KeyCode.D);
         }
     }
+    void CheckEnd()
+    {
+        if (!InGameStreamManager.Instance.music_started) Destroy(gameObject);
+    }
 
     void Update()
     {
         CheckInput();
         Move();
         CheckPass();
+        CheckEnd();
     }
 }

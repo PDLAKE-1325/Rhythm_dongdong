@@ -8,7 +8,7 @@ public class NoteGenerator : MonoBehaviour
     [SerializeField] GameObject note_prefab;
 
     [Header("노트 생성 타이밍")]
-    [SerializeField] float note_spawn_ahead_time;
+    [SerializeField] double note_spawn_ahead_time;
 
     [Header("노트 라인별 목적지")]
     [SerializeField] Transform end_up;
@@ -29,8 +29,7 @@ public class NoteGenerator : MonoBehaviour
     {
         int len = InGameStreamManager.Instance.music_sheet.Count;
         int cur_spawn_idx = InGameStreamManager.Instance.current_node_spawn_index;
-        float time = InGameStreamManager.Instance.current_time;
-
+        double time = SoundManager.Instance.GetMusicTime();
 
         if (cur_spawn_idx < len)
         {
