@@ -37,20 +37,20 @@ public class NoteGenerator : MonoBehaviour
             NoteData curSpawnNote = InGameStreamManager.Instance.music_sheet[cur_spawn_idx];
             if (curSpawnNote.time <= time + note_spawn_ahead_time)
             {
-                GenerateNote(curSpawnNote);
+                GenerateNote(curSpawnNote, cur_spawn_idx);
                 InGameStreamManager.Instance.AddCurNodeSpawnIndex();
             }
         }
     }
 
-    void GenerateNote(NoteData data)
+    void GenerateNote(NoteData data, int cur_spawn_index)
     {
         GameObject new_node = Instantiate(note_prefab, note_parent);
 
         Note note_script;
         new_node.TryGetComponent(out note_script);
 
-        note_script.Init(data, lane_end_pos[data.lane]);
+        note_script.Init(data, lane_end_pos[data.lane], cur_spawn_index);
     }
 
     void Start()
