@@ -4,10 +4,12 @@ public class Note : MonoBehaviour
 {
     public NoteData note_data;
     Vector3 move_dir;
+    int my_index;
 
-    public void Init(NoteData data, Transform end_pos)
+    public void Init(NoteData data, Transform end_pos, int index)
     {
         note_data = data;
+        my_index = index;
 
         float cur_time = InGameStreamManager.Instance.current_time;
         float distance = data.speed * (data.time - cur_time);
@@ -41,11 +43,25 @@ public class Note : MonoBehaviour
         transform.position += move_dir * Time.deltaTime * note_data.speed;
     }
 
-    void Damage()
+    bool indexAdded;
+    void CheckPass()
     {
+        float cur_time = InGameStreamManager.Instance.current_time;
+        float bad_judge = JudgementSystem.Instance.bad;
+        if (note_data.time < cur_time - bad_judge && !indexAdded)
+        {
+            indexAdded = true;
+            InGameStreamManager.Instance.AddCurNodeIndex();
+        }
+
         float distance = Vector2.Distance(transform.position, Vector2.zero);
         if (distance <= InGameStreamManager.Instance.note_damage_distance)
         {
+            if (!indexAdded)
+            {
+                indexAdded = true;
+                InGameStreamManager.Instance.AddCurNodeIndex();
+            }
             JudgementSystem.Instance.MissNote(this);
         }
     }
@@ -57,7 +73,7 @@ public class Note : MonoBehaviour
         || Input.GetKeyDown(KeyCode.A) && note_data.lane == LaneType.Left
         || Input.GetKeyDown(KeyCode.D) && note_data.lane == LaneType.Right)
         {
-            JudgementSystem.Instance.JudgeNoteTime(this);
+            JudgementSystem.Instance.JudgeNoteTime(this, my_index);
         }
     }
 
@@ -65,6 +81,6 @@ public class Note : MonoBehaviour
     {
         CheckInput();
         Move();
-        Damage();
+        CheckPass();
     }
 }

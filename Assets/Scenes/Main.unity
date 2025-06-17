@@ -7880,10 +7880,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6156b037522984427acc6e28e88afb19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  perfect: 0.04
-  great: 0.08
-  good: 0.12
-  bad: 0.16
+  m_perfect: 0.04
+  m_great: 0.08
+  m_good: 0.12
+  m_bad: 0.16
   note_death_parent: {fileID: 715062241}
   judge_text_parent: {fileID: 1164513792}
   note_death_prefab: {fileID: 1464691603796441807, guid: 67589902e90fb4afea887376e383f0a6, type: 3}

@@ -100,7 +100,6 @@ public class InGameStreamManager : Singleton<InGameStreamManager>
 
     void Update()
     {
-        print(current_node_index);
         if (music_started)
             current_time += Time.deltaTime;
         SetMenuMusic();

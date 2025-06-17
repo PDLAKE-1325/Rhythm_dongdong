@@ -10,10 +10,14 @@ public class JudgementSystem : Singleton<JudgementSystem>
     }
 
     [Header("판정시간 (+-)")]
-    [SerializeField] float perfect;
-    [SerializeField] float great;
-    [SerializeField] float good;
-    [SerializeField] float bad;
+    [SerializeField] float m_perfect;
+    [SerializeField] float m_great;
+    [SerializeField] float m_good;
+    [SerializeField] float m_bad;
+    public float perfect => m_perfect;
+    public float great => m_great;
+    public float good => m_good;
+    public float bad => m_bad;
 
     [Header("트랜트폼 참조")]
     [SerializeField] Transform note_death_parent;
@@ -41,16 +45,16 @@ public class JudgementSystem : Singleton<JudgementSystem>
         StatusManager.Instance.AddJudge("miss");
         Destroy(note.gameObject);
         Instantiate(miss_prefab, judge_text_parent);
-        InGameStreamManager.Instance.AddCurNodeIndex();
     }
 
-    public void JudgeNoteTime(Note note)
+    public void JudgeNoteTime(Note note, int note_index)
     {
+        if (InGameStreamManager.Instance.current_node_index != note_index) return;
+
         float note_time = note.note_data.time;
         float inputTime = InGameStreamManager.Instance.current_time;
 
         float time_space = MathF.Abs(inputTime - note_time);
-
 
         if (time_space <= perfect)
         {
