@@ -68,12 +68,23 @@ public class Note : MonoBehaviour
 
     void CheckInput()
     {
-        if (Input.GetKeyDown(KeyCode.W) && note_data.lane == LaneType.Up
-        || Input.GetKeyDown(KeyCode.S) && note_data.lane == LaneType.Down
-        || Input.GetKeyDown(KeyCode.A) && note_data.lane == LaneType.Left
-        || Input.GetKeyDown(KeyCode.D) && note_data.lane == LaneType.Right)
+        if (InGameStreamManager.Instance.current_node_index != my_index) return;
+
+        if (Input.GetKeyDown(KeyCode.W) && note_data.lane == LaneType.Up)
         {
-            JudgementSystem.Instance.JudgeNoteTime(this, my_index);
+            JudgementSystem.Instance.JudgeNoteTime(this, KeyCode.W);
+        }
+        else if (Input.GetKeyDown(KeyCode.S) && note_data.lane == LaneType.Down)
+        {
+            JudgementSystem.Instance.JudgeNoteTime(this, KeyCode.S);
+        }
+        else if (Input.GetKeyDown(KeyCode.A) && note_data.lane == LaneType.Left)
+        {
+            JudgementSystem.Instance.JudgeNoteTime(this, KeyCode.A);
+        }
+        else if (Input.GetKeyDown(KeyCode.D) && note_data.lane == LaneType.Right)
+        {
+            JudgementSystem.Instance.JudgeNoteTime(this, KeyCode.D);
         }
     }
 

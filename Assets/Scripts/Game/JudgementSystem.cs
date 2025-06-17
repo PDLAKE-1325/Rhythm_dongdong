@@ -31,6 +31,9 @@ public class JudgementSystem : Singleton<JudgementSystem>
     [SerializeField] GameObject bad_prefab;
     [SerializeField] GameObject miss_prefab;
 
+    bool onJudge;
+    KeyCode lastKey;
+
     void NoteJudged(GameObject text_prefab, Note note)
     {
         Destroy(note.gameObject);
@@ -47,9 +50,11 @@ public class JudgementSystem : Singleton<JudgementSystem>
         Instantiate(miss_prefab, judge_text_parent);
     }
 
-    public void JudgeNoteTime(Note note, int note_index)
+    public void JudgeNoteTime(Note note, KeyCode key)
     {
-        if (InGameStreamManager.Instance.current_node_index != note_index) return;
+        if (onJudge) return;
+        onJudge = true;
+        lastKey = key;
 
         float note_time = note.note_data.time;
         float inputTime = InGameStreamManager.Instance.current_time;
@@ -75,7 +80,10 @@ public class JudgementSystem : Singleton<JudgementSystem>
         {
             StatusManager.Instance.AddJudge("bad");
             NoteJudged(bad_prefab, note);
-
         }
+    }
+    void Update()
+    {
+        if (onJudge && Input.GetKeyUp(lastKey)) onJudge = false;
     }
 }
