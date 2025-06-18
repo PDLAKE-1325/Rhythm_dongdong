@@ -674,7 +674,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3969a405868d64662a602a36e2b15cf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  saveMusicType: 1
+  saveMusicType: 3
   WantTest: 1
   bgmSource: {fileID: 1588156809}
   bgmClip:
