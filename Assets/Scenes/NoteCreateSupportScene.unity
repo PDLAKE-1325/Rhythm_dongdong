@@ -675,7 +675,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   saveMusicType: 3
-  WantTest: 0
+  WantTest: 1
   bgmSource: {fileID: 1588156809}
   bgmClip:
   - {fileID: 8300000, guid: 9dbc7be653bf2424ea2cfa7b84ca3511, type: 3}
