@@ -112,25 +112,25 @@ public class NoteCreateSupporter : MonoBehaviour
         {
             AddList(LaneType.Up, GetMusicTime());
         }
-        else if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.A))
         {
             AddList(LaneType.Left, GetMusicTime());
 
         }
-        else if (Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKeyDown(KeyCode.S))
         {
             AddList(LaneType.Down, GetMusicTime());
 
         }
-        else if (Input.GetKeyDown(KeyCode.D))
+        if (Input.GetKeyDown(KeyCode.D))
         {
             AddList(LaneType.Right, GetMusicTime());
         }
-        else if (Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKeyDown(KeyCode.P))
         {
             UpdateNoteData();
         }
-        else if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.R))
         {
             Restart();
         }
