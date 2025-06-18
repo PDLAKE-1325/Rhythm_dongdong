@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Data
   m_EditorClassIdentifier: 
   Tako_Halo:
-  - time: 10.825
+  - time: 11.373333333333221
     speed: 3
     lane: 3
     type: 0
