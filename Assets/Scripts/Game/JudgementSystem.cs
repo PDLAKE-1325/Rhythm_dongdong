@@ -58,7 +58,7 @@ public class JudgementSystem : Singleton<JudgementSystem>
 
     public void JudgeNoteTime(Note note, KeyCode key)
     {
-        if (onJudge && lastKey == key) return;
+        if (onJudge) return;
         onJudge = true;
         lastKey = key;
 
