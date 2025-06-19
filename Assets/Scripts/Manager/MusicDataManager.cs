@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class MusicDataManager : Singleton<MusicDataManager>
@@ -13,9 +14,10 @@ public class MusicDataManager : Singleton<MusicDataManager>
 
     void Start()
     {
-        music_data[0].sheet_music.notes = noteSO.MorePlastic_Power;
-        music_data[1].sheet_music.notes = noteSO.Tako_Halo;
-        music_data[2].sheet_music.notes = noteSO.WW_OIIAOIIA;
-        music_data[3].sheet_music.notes = noteSO.BEATPELLAHOUSE_CandyThief;
+        music_data[0].sheet_music.notes = noteSO.MorePlastic_Power.OrderBy(n => n.time).ToList();
+        music_data[1].sheet_music.notes = noteSO.Tako_Halo.OrderBy(n => n.time).ToList();
+        music_data[2].sheet_music.notes = noteSO.WW_OIIAOIIA.OrderBy(n => n.time).ToList();
+        music_data[3].sheet_music.notes = noteSO.BEATPELLAHOUSE_CandyThief.OrderBy(n => n.time).ToList();
     }
+
 }

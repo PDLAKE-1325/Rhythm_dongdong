@@ -4,7 +4,7 @@ public class Note : MonoBehaviour
 {
     public NoteData note_data;
     Vector3 move_dir;
-    int my_index;
+    public int my_index;
 
     public void Init(NoteData data, Transform end_pos, int index)
     {
